@@ -138,3 +138,29 @@ section h3 {
     border: 2px;
     border-radius: 5px;
 }
+
+.card-categ {
+    border: 2px solid rgb(118, 175, 223); /* Establece un borde azul para las tarjetas */
+}
+/* Reduce el margen entre las tarjetas */
+.row.row-cols-1.row-cols-md-3.g-4 > .col {
+    margin-bottom: 1rem;
+}
+
+#boton-borrar, #boton-resumen{
+    background-color: rgb(166, 255, 50);;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.custom-rectangle {
+    background-color: #c1dfff; /* Cambiar el fondo a azul celeste */
+    color: #004794; /* Cambiar el color del texto a negro */
+    padding: 10px; /* Agregar relleno al recuadro */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    text-align:left; /* Centrar el texto horizontalmente */
+  }
+  
