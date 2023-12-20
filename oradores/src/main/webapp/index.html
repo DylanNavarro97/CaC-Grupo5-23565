@@ -236,7 +236,7 @@
           Cuéntanos de qué quieres hablar!
         </p>
 
-        <form class="container orador-form">
+        <form class="container orador-form" action="endpoint" method="post">
           <div class="m-0 p-0 row gy-2">
             <div class="col-md-6 p-0 pe-md-2">
               <input
@@ -246,6 +246,7 @@
                 required
                 minlength="5"
                 maxlength="30"
+                name="nombreInput"
               />
             </div>
             <div class="col-md-6 p-0 ps-md-2">
@@ -256,6 +257,7 @@
                 required
                 minlength="5"
                 maxlength="30"
+                name="apellidoInput"
               />
             </div>
           </div>
@@ -268,13 +270,14 @@
             required
             minlength="15"
             maxlength="100"
+            name="temaInput"
           ></textarea>
 
           <p class="text-secondary mt-1">
             Recuerda incluir un título a la charla
           </p>
 
-          <button class="btn container-fluid sendButtonForm">Enviar</button>
+          <button class="btn container-fluid sendButtonForm" type="submit">Enviar</button>
         </form>
       </section>
     </main>

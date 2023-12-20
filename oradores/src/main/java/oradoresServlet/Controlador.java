@@ -1,4 +1,4 @@
-
+package oradoresServlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,33 +6,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Controlador
- */
+import com.fasterxml.jackson.databind.ObjectMapper;
+import modelos.Orador;
+import mappers.MapperJson;
+
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-    /**
-     * Default constructor. 
-     */
+	private ObjectMapper mapper;
+    
     public Controlador() {
-        // TODO Auto-generated constructor stub
+    	mapper = new MapperJson().getMapper();
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		String nombre = request.getParameter("nombreInput");
+		String apellido = request.getParameter("apellidoInput");
+		String tema = request.getParameter("temaInput");
+		
+		Orador orador = new Orador(nombre, apellido, tema);
+		String oradorJson = mapper.writeValueAsString(orador);
+		response.getWriter().write(oradorJson);
+		
 	}
 
 }

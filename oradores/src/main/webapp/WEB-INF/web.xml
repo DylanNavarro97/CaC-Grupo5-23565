@@ -6,10 +6,6 @@
     <servlet-name>oradoresServlet</servlet-name>
     <servlet-class>oradoresServlet</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>oradoresServlet</servlet-name>
-    <url-pattern>/endpoint</url-pattern>
-  </servlet-mapping>
   <display-name>oradores</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -21,12 +17,12 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>Controlador</display-name>
-    <servlet-name>Controlador</servlet-name>
-    <servlet-class>Controlador</servlet-class>
+    <display-name>ControladorO</display-name>
+    <servlet-name>ControladorO</servlet-name>
+    <servlet-class>oradoresServlet.Controlador</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Controlador</servlet-name>
+    <servlet-name>ControladorO</servlet-name>
     <url-pattern>/endpoint</url-pattern>
   </servlet-mapping>
 </web-app>
