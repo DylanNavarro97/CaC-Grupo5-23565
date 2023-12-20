@@ -7,11 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import infractrusture.persistence.database.DbRepositoryImpl;
 import modelos.Orador;
 import mappers.MapperJson;
+import infractrusture.persistence.*;
+import infractrusture.persistence.database.*;
 
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private IPersistencia persistence = new DbRepositoryImpl();
 	private ObjectMapper mapper;
     
     public Controlador() {
