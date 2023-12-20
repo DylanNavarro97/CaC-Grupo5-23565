@@ -6,11 +6,12 @@ import infractrusture.persistence.IPersistencia;
 import modelos.Orador;
 
 public class DbRepositoryImpl implements IPersistencia{
-
+	
+	public static ArrayList<Orador> bdMySql = new ArrayList<>();
+	
 	@Override
 	public void guardar(Orador newOrador) {
-		// TODO Auto-generated method stub
-		
+		DbRepositoryImpl.bdMySql.add(newOrador);
 	}
 
 	@Override

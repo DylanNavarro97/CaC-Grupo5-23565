@@ -12,6 +12,7 @@ public interface IPersistencia {
 	
 	// READ
 	ArrayList<Orador> ListarOradores();
+	Orador getOradorByPorId(String id);
 	
 	// UPDATE
 	Orador update(String usuario);

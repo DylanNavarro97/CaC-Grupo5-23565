@@ -16,7 +16,7 @@ import infractrusture.persistence.database.*;
 
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private IPersistencia persistence = new DbRepositoryImpl();
+	// private IPersistencia persistence = new DbRepositoryImpl();
 	private ObjectMapper mapper;
     
     public Controlador() {
