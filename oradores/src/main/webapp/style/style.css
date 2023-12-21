@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header nav {
+  background-color: #363a3b;
+}
+
+header nav .logoImg {
+  width: 120px;
+}
+
+header nav .buy-tickets {
+  color: #32bb50;
+}
+
+textarea {
+  resize: none;
+}
+
+footer {
+  background: rgb(0, 62, 124);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 62, 124, 1) 0%,
+    rgba(9, 56, 93, 1) 47%,
+    rgba(0, 90, 108, 1) 100%
+  );
+}
+
+#mainBanner,
+#mainBanner .carousel-item {
+  max-height: 80vh;
+}
+
+.bannerText{
+    width: 50%;
+}
+
+.bannerText p{
+    font-size: 22px;
+}
+
+.bannerText h2{
+    font-size: 36px;
+}
+
+.bannerImg {
+  filter: brightness(0.4);
+  width: 100vw;
+  object-fit: cover;
+}
+
+.bannerContainer {
+  position: absolute;
+  top: 0;
+}
+
+.cardContainer {
+  max-width: 400px;
+}
+
+.sendButtonForm {
+  background-color: #32bb50;
+  color: white;
+}
+
+.sendButtonForm:hover {
+  background-color: #32bb50;
+  color: white;
+}
+
+@media all and (min-width: 641px) and (max-width: 990px){
+    .bannerText p{
+        font-size: 18px;
+    }
+    
+    .bannerText h2{
+        font-size: 25px;
+    }
+
+    .bannerText{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 640px) {
+
+    .bannerImg{
+        object-fit: contain;
+        width: auto;
+    }
+
+    .bannerText p{
+        font-size: 16px;
+        z-index: 1;
+    }
+
+    .orador-form {
+        width: 75vw;
+    }
+
+    .bannerText{
+        width: 100%;
+    }
+}
