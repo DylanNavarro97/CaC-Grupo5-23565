@@ -1,4 +1,7 @@
 const url = 'http://localhost:8080/oradores/endpoint'
+const tableBody = document.querySelector('.tableBody')
+console.log(tableBody)
+let oradores = []
 
 const datosDeFetch = {
     method: 'GET',
@@ -14,7 +17,18 @@ fetch(url, datosDeFetch)
     }
     return response.json()
 }).then(datos => {
-    console.log(datos)
+    datos.map((orador, i) => crearFila(i + 1, orador))
 }).catch((error) => {
     console.log('Error en la solicitud GET:', error)
 })
+
+const crearFila = (orden, objeto) => {
+    tableBody.innerHTML += `
+    <tr>
+        <th scope="row">${orden}</th>
+        <td>${objeto.nombre}</td>
+        <td>${objeto.apellido}</td>
+        <td>${objeto.tema}</td>
+    </tr> `
+}
+
