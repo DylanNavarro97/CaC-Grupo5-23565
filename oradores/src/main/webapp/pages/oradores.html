@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina de trabajo practico frontend para Codo a Codo">
+    <meta name="author" content="Dylan Navarro"/>
+    <link rel="icon" type="image/x-icon" href="./img/codo-a-codo1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/tickets.css">
+    <title>Tp Frontend - Oradores</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/codoacodo.png" alt="codo a codo logo" class="logoImg">
+                    Conf Bs As
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#BurgerButton"
+                    aria-controls="BurgerButton" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="BurgerButton">
+                    <div class="navbar-nav">
+                        <a class="nav-link fs-5" aria-current="page" href="../index.html">La conferencia</a>
+                        <a class="nav-link fs-5 active" href="#">Los oradores</a>
+                        <a class="nav-link fs-5" href="#">El lugar y la fecha</a>
+                        <a class="nav-link fs-5" aria-disabled="true" href="#">Conviértete en orador</a>
+                        <a class="nav-link fs-5 buy-tickets" aria-disabled="true" href="./tickets.html">Comprar
+                            tickets</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Oradores</h2>          
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Tema</th>
+                  </tr>
+                </thead>
+                <tbody class="tableBody">
+                </tbody>
+              </table>
+        </section>
+        
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <ul class="list-unstyled d-flex gap-5 justify-content-start justify-content-lg-around mb-0 text-white p-5 flex-wrap">
+                <li class="fs-5">Preguntas <br>frecuentes</li>
+                <li class="fs-5">Contáctanos</li>
+                <li class="fs-5">Prensa</li>
+                <li class="fs-5">Conferencias</li>
+                <li class="fs-5">Términos y <br>condiciones</li>
+                <li class="fs-5">Privacidad</li>
+                <li class="fs-5">Estudiantes</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="../js/oradores.js"></script>
+</body>
+</html>
