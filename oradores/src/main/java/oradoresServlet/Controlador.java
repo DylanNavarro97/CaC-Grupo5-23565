@@ -1,6 +1,8 @@
 package oradoresServlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +25,9 @@ public class Controlador extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		ArrayList<Orador> oradores = new MysqlRepositoryImpl().ListarOradores();
+		String oradoresJson = mapper.writeValueAsString(oradores);
+		response.getWriter().write(oradoresJson);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
