@@ -8,15 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import infractrusture.persistence.database.DbRepositoryImpl;
 import modelos.Orador;
 import mappers.MapperJson;
 import infractrusture.persistence.*;
-import infractrusture.persistence.database.*;
+import infractrusture.persistence.mysql.MysqlRepositoryImpl;
 
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	// private IPersistencia persistence = new DbRepositoryImpl();
+	private IPersistencia persistence = new MysqlRepositoryImpl();
 	private ObjectMapper mapper;
     
     public Controlador() {
@@ -35,6 +34,7 @@ public class Controlador extends HttpServlet {
 		
 		Orador orador = new Orador(nombre, apellido, tema);
 		String oradorJson = mapper.writeValueAsString(orador);
+		persistence.guardar(orador);
 		response.getWriter().write(oradorJson);
 		
 	}
