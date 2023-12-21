@@ -36,10 +36,16 @@ public class Controlador extends HttpServlet {
 		String apellido = request.getParameter("apellidoInput");
 		String tema = request.getParameter("temaInput");
 		
-		Orador orador = new Orador(nombre, apellido, tema);
-		String oradorJson = mapper.writeValueAsString(orador);
-		persistence.guardar(orador);
-		response.getWriter().write(oradorJson);
+		if (nombre != null && apellido != null && tema != null) {
+			Orador orador = new Orador(nombre, apellido, tema);
+			String oradorJson = mapper.writeValueAsString(orador);
+			persistence.guardar(orador);
+			response.getWriter().write(oradorJson);
+		} else {
+			response.getWriter().write("Error: Los datos no pueden ser nulos");
+		}
+		
+		
 		
 	}
 

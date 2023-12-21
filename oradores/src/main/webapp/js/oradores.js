@@ -1,6 +1,5 @@
 const url = 'http://localhost:8080/oradores/endpoint'
 const tableBody = document.querySelector('.tableBody')
-console.log(tableBody)
 let oradores = []
 
 const datosDeFetch = {
