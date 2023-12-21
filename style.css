@@ -1,0 +1,181 @@
+@media screen and (max-width: 768px) {
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Los elementos hijos se apilan verticalmente */
+    height: 100vh; /* Ajusta la altura del contenedor principal al 100% del viewport */
+    margin: 0; /* Elimina márgenes predeterminados del body */
+    overflow-x: hidden; /* Elimina la barra de desplazamiento horizontal */
+}
+a img {
+    width: 80px;
+    height: 45px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+div h2 {
+    color: rgb(233, 245, 255);
+    display: inline;
+    font-size: 20px;
+    text-align: right;
+}
+header{
+    background-color: #2d2f33; /* Color de fondo del encabezado */
+    padding: 0; 
+}
+bg-custom{
+    background-color: #2d2f33; /* Color de fondo del encabezado */
+}
+
+#navbarNav {
+    padding-left: 15% ;    
+  } 
+
+#barNav{
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del eje horizontal */
+    padding: 10px;
+} 
+
+
+.col-md.text-light.bg-aside1 {
+    padding-top: 20px; /* Relleno superior del contenedor de texto */
+  }
+.col-md.text-light.bg-aside1 h2,
+.col-md.text-light.bg-aside1 p,
+.col-md.text-light.bg-aside1 a {
+  margin-right: 20px; /* Margen derecho */
+  margin-left: 20px; /* Margen izquierdo */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+.mi-footer {
+    background-color: #0c555f; /* Cambia #ff9900 al color deseado */
+}
+
+.mi-footer ul{
+    padding-top:15px;
+}
+
+.pf{ 
+    hyphens: auto;
+}
+
+main {
+    flex: 2; /* Hace que el contenido principal ocupe todo el espacio disponible */
+    padding: 0; /* Espaciado interno del contenido principal */
+    border: 0;
+}
+
+.span {
+    font-size: 35px;
+    display: block;
+    font-weight: bold;
+}
+
+.contenedor span{
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 35px;
+}
+.contenedor h2{
+    color: rgb(44, 44, 44);
+    font-size: 12.5px;
+}
+
+section h3 {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+  
+.principal {
+    background-color: #000000; /* Un fondo de color claro para resaltar la imagen opaca */
+}
+
+.carousel-caption{
+    width: 500px;
+    height: 200px;
+    margin-left: 13cm;
+    /*display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;*/
+}
+ .img-principal{
+    opacity: 0.5; /* Ajusta el valor para cambiar la opacidad (0.0 = completamente transparente, 1.0 = completamente opaco) */
+    max-width: 100%; /* La imagen no será más ancha que el contenedor */
+    max-height: 100%; /* La imagen no será más alta que el contenedor */
+    width: auto; /* Mantener la proporción de aspecto original de la imagen */
+    height: auto; /* Mantener la proporción de aspecto original de la imagen */
+    border: 0;
+ } 
+ .principal h5{
+    font-size: 30px;
+    margin-left: 350px;
+ }
+ .principal a{
+    margin-left: 150px;
+ }
+
+.ultEnviar {
+    background-color: rgb(166, 255, 50);;
+    color: white;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.card-categ {
+    border: 2px solid rgb(118, 175, 223); /* Establece un borde azul para las tarjetas */
+}
+/* Reduce el margen entre las tarjetas */
+.row.row-cols-1.row-cols-md-3.g-4 > .col {
+    margin-bottom: 1rem;
+}
+
+#boton-borrar, #boton-resumen{
+    background-color: rgb(166, 255, 50);;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.custom-rectangle {
+    background-color: #c1dfff; /* Cambiar el fondo a azul celeste */
+    color: #004794; /* Cambiar el color del texto a negro */
+    padding: 10px; /* Agregar relleno al recuadro */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    text-align:left; /* Centrar el texto horizontalmente */
+  }
+  
+/*aca arranca el estilo de Oradores*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
