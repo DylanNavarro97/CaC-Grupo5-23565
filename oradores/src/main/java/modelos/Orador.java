@@ -6,13 +6,11 @@ public class Orador {
 	private String nombre;
 	private String Apellido;
 	private String tema;
-	private UUID idOrador;
 	
 	public Orador(String nombre, String apellido, String tema) {
 		this.nombre = nombre;
-		Apellido = apellido;
+		this.Apellido = apellido;
 		this.tema = tema;
-		this.idOrador = UUID.randomUUID();
 	}
 	
 	public String getNombre() {
@@ -33,8 +31,4 @@ public class Orador {
 	public void setTema(String tema) {
 		this.tema = tema;
 	}
-
-	public UUID getIdOrador() {
-		return idOrador;
-	}	
 }
