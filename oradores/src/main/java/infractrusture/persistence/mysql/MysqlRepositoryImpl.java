@@ -1,17 +1,16 @@
-package infractrusture.persistence.database;
+package infractrusture.persistence.mysql;
 
 import java.util.ArrayList;
 
 import infractrusture.persistence.IPersistencia;
 import modelos.Orador;
 
-public class DbRepositoryImpl implements IPersistencia{
-	
-	public static ArrayList<Orador> bdMySql = new ArrayList<>();
-	
+public class MysqlRepositoryImpl implements IPersistencia{
+
 	@Override
 	public void guardar(Orador newOrador) {
-		DbRepositoryImpl.bdMySql.add(newOrador);
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -37,5 +36,5 @@ public class DbRepositoryImpl implements IPersistencia{
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 }
